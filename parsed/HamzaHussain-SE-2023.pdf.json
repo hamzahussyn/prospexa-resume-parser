@@ -2,8 +2,15 @@
   "name": "Hamza Hussain",
   "email": "hamzaahussyn@outlook.com",
   "phone": "+92-334-386-7130",
-  "profiles": "github.com/hamzahussynlinkedin.com/in/hamzahussyn github.com/hamzahussyn",
+  "profiles": "github.com/hamzahussynlinkedin.com/in/hamzahussyn",
   "experience": "__________________________________________________________________________________________________\nSoftware Engineer \" Folio3 Software April 2022 – Present\nWorked on JavaScript related technologies and shipped multiple projects, working with clients internationally, mainly from US.\nBuilt robust backends using TypeGraphQL, TypeORM, Node JS, Nest JS, MySQL, and MongoDB.\nUtilized all the trending technologies for frontends like React JS, Vue JS, and their modern UI libraries, with the latest state\nmanagement techniques.\nManaged client communication, from scrum meetings to sprint planning to the final deliverables. Practiced negotiation,\npitched enhanced ideas to the clients.\nFull-Stack Developer \" ZenKoders March 2022 – April 2022\nCreated a backend from ground up for a parking sharing app, in NodeJS.\nBackend Engineer \" SOQA.chat November 2022 – March 2022\nCreated an intelligent question answering service which would analyze documents and generate answers to complex queries. This\nwas done leveraging OpenAI and the service was written in NodeJS with Sequelize ORM.\nSoftware Engineer Intern \" KoderLabs August 2021 – December 2021\nEntered as a full stack intern, worked mostly on JavaScript related tech stack.\nUsed React.JS, React Native for frontend with Redux for state management.\nUsed Nest.JS, TypeScript, and TypeORM on the backend. Delivered on three projects in production.",
   "education": "__________________________________________________________________________________________________\nSZABIST, Karachi, Pakistan 2018 – 2022\nBachelor of Sciences — Computer Science\nWHALES, Karachi, Pakistan 2015 – 2017\nA'Levels — Computer Science",
-  "skills": "& OTHER\n__________________________________________________________________________________________________"
+  "skills": "& OTHER\n__________________________________________________________________________________________________",
+  "github": {
+    "name": "hamzahussyn",
+    "location": "Karachi, Pakistan",
+    "followers": "6",
+    "repositories": "2323\nnano-credentials-equivalence\ndaraz-data-scrapper\nSimilarityAnalyser\nIntermediate-Code-Generation\nFactory-Roster-RDBMS-Project\nalgorithms-and-datastructures-fcc",
+    "contributions": "58"
+  }
 }

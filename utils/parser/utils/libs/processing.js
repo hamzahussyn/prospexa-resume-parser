@@ -1,10 +1,12 @@
 'use strict';
+
 const path = require('path'),
   _ = require('underscore'),
   textract = require('textract'),
   mime = require('mime-types'),
   fs = require('fs'),
-  logger = require('tracer').colorConsole();
+  logger = require('tracer').colorConsole(),
+  { removeNonAlphaNumeric, experienceInYears } = require('../transformers');
 
 module.exports.runFile = processFile;
 module.exports.runUrl = processUrl;
@@ -137,6 +139,10 @@ PreparedFile.prototype.saveResume = function(path, cbSavedResume) {
   if (!_.isFunction(cbSavedResume)) {
     return logger.error('cbSavedResume should be a function');
   }
+
+  console.log("before save on resume", this.resume);
+  this.resume = removeNonAlphaNumeric(this.resume);
+  experienceInYears(this.resume);
 
   if (fs.statSync(path).isDirectory() && this.resume) {
     fs.writeFile(

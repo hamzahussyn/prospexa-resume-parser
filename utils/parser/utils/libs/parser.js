@@ -42,7 +42,7 @@ function makeRegExpFromDictionary() {
     profileExpr =
       '((?:https?://)?(?:www\\.)?' +
       profile.replace('.', '\\.') +
-      '[/\\w \\.-]*)';
+      '[/\\w\\.-]*)';
     if (_.isFunction(profileHandler)) {
       regularRules.profiles.push([profileExpr, profileHandler]);
     } else {
@@ -213,7 +213,6 @@ function parseDictionaryProfiles(row, Resume) {
   var regularDictionary = dictionary.profiles,
     find,
     modifiedRow = row;
-
   _.forEach(regularDictionary, function(expression) {
     var expressionHandler;
 

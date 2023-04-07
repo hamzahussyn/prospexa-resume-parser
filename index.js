@@ -6,9 +6,7 @@ var resumeParser = require("./utils/parser");
 var resume = "HamzaHussain-SE-2023.pdf";
 
 function parser(name, cb) {
-  resumeParser.parseResumeFile(`./resume/${name}`, "./parsed")
-    .then((res) => cb(res))
-    .catch((error) => console.log(error));
+  resumeParser.parseResumeFile(`./resume/${name}`, "./parsed", cb);
 }
 
 function main() {

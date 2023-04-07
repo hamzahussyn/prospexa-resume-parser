@@ -32,12 +32,29 @@ module.exports = {
     [
       'github.com',
       function(url, Resume, profilesWatcher) {
-        download(url, function(data, err) {
+        let reconstructedURL = null;
+        try {
+          reconstructedURL = new URL(url);
+        } catch (error) {
+          console.log('Dismorphed url for Github, correcting it.');
+          const sections = url.split('/');
+          const githubURL = 'https://github.com';
+          const base = sections.length > 0 ? sections[sections.length - 1] : '';
+          reconstructedURL = new URL(base, githubURL);
+          console.log('Corrected to my best attempt: ', reconstructedURL.href);
+        }
+        download(reconstructedURL.href, function(data, err) {
           if (data) {
             var $ = cheerio.load(data),
-              fullName = $('.vcard-fullname').text(),
+              fullName = $('.vcard-username')
+                .text()
+                .trim(),
               location = $('.octicon-location')
                 .parent()
+                .text()
+                .trim(),
+              followers = $('.octicon-people')
+                .siblings('.color-fg-default')
                 .text(),
               mail = $('.octicon-mail')
                 .parent()
@@ -50,8 +67,21 @@ module.exports = {
                 .text(),
               company = $('.octicon-organization')
                 .parent()
-                .text();
-
+                .text(),
+              repositories = $('.octicon-repo')
+                .next()
+                .text()
+                .trim()
+                .split('\n')
+                .join('\n')
+              contributions = $('.js-yearly-contributions')
+                .children()
+                .children()
+                .siblings('.f4')
+                .text()
+                .trim()
+                .split('\n')[0]
+                
             Resume.addObject('github', {
               name: fullName,
               location: location,
@@ -59,6 +89,9 @@ module.exports = {
               link: link,
               joined: clock,
               company: company,
+              followers: followers,
+              repositories: repositories,
+              contributions: contributions
             });
           } else {
             return console.log(err);
@@ -71,7 +104,18 @@ module.exports = {
     [
       'linkedin.com',
       function(url, Resume, profilesWatcher) {
-        download(url, function(data, err) {
+        let reconstructedURL = null;
+        try {
+          reconstructedURL = new URL(url);
+        } catch (error) {
+          console.log('Dismorphed url for Linkedin, correcting it.');
+          const sections = url.split('/');
+          const linkedinURL = 'https://linkedin.com';
+          const base = `/in/${sections.length > 0 ? sections[sections.length - 1] : ''}`;
+          reconstructedURL = new URL(base, linkedinURL);
+          console.log('Corrected to my best attempt: ', reconstructedURL.href);
+        }
+        download(reconstructedURL.href, function(data, err) {
           if (data) {
             var $ = cheerio.load(data),
               linkedData = {
