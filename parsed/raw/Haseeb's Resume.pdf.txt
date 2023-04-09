@@ -1,0 +1,84 @@
+Haseeb Tariq
+Software Engineering Intern
+Motivated and driven computer science graduate with a strong
+foundation in web development and a passion for emerging
+technologies like full stack development and blockchain. Seeking an
+internship in software engineering to apply my technical skills and
+problem-solving abilities while continuing to grow and learn as a
+professional in these exciting elds.
+ihaseebtariq1@gmail.com
+03101530741
+Islamabad, Pakistan
+linkedin.com/in/haseebcheema
+github.com/haseebcheema
+EDUCATION
+Bachelor of Computer Sciences
+Air University
+09/2018 - 06/2022, Islamabad
+Completed coursework in programming languages, data
+structures & algorithms, databases, full stack web
+development, arti cial intelligence, data science,
+computer networks and more.
+Intermediate
+Punjab Group of Colleges - PGC
+2015 - 2017, Daska, Punjab
+Matriculation
+The Education City School
+2008 - 2015, Daska, Punjab
+PERSONAL PROJECTS
+Aspect Based Sentiment Classi cation (2022)
+For a data science-based nal year project, various techniques
+and models were utilized in Python to analyze sentiment in
+sentence reviews by identifying key aspects within the reviews.
+Preprocessing steps were also implemented as part of the
+project. The ultimate goal was to use these aspects to predict
+the sentiment of the sentence reviews.
+QuickNews - React Based Web Application (2022)
+A single-page web application was created using React that
+provides users with the latest news in various categories, such
+as sports, politics, and entertainment. The news data is
+accessed through the use of an API from newsapi.org.
+Inventory Management System - DBMS (2020)
+A database management system project was developed to
+handle the inventory system for a store. The project was
+implemented using C# and SQL as the programming languages.
+WORK EXPERIENCE
+Front End Developer Intern
+Interns Pakistan
+06/2022 - 06/2022,
+As a Front End Development intern with Interns Pakistan,
+I gained valuable hands-on experience in basics of web
+development. Through this internship program, I was
+able to learn and practice new skills such as HTML, CSS,
+JavaScript and Bootstrap.
+SKILLS
+HTML/HTML5 CSS/CSS3
+JavaScript C++
+Java Python
+ReactJS Node.js
+JQuery SQL
+Knowledge of responsive
+design principles
+Familiarity with version
+control systems such as Git
+Strong problem-solving and
+debugging skills
+Good communication and
+collaboration skills
+Experience with Bootstrap,
+and other front end
+frameworks
+CERTIFICATES
+Introduction to Front-End Development - META
+Programming with JavaScript - META
+LANGUAGES
+English
+Professional Working Pro ciency
+Urdu
+Elementary Pro ciency
+INTERESTS
+Full Stack Development Blockchain Development
+Augmented Reality Data Engineering
+Courses
+Achievements/Tasks
+{end}

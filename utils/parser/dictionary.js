@@ -5,16 +5,21 @@ var _ = require('underscore');
 module.exports = {
   titles: {
     objective: ['objective', 'objectives'],
-    summary: ['summary'],
-    technology: ['technology', 'technologies'],
-    experience: ['experience'],
+    summary: ['summary', 'professional summary'],
+    technology: ['technology'],
+    experience: ['experience', 'work experience'],
     education: ['education'],
-    skills: ['skills', 'Skills & Expertise', 'technology', 'technologies'],
+    skills: ['skills', 'Skills & Expertise', 'technical skills'],
     languages: ['languages'],
     courses: ['courses'],
-    projects: ['projects'],
+    projects: [
+      'projects',
+      'personal projects',
+      'academic projects',
+      'final year project',
+    ],
     links: ['links'],
-    contacts: ['contacts'],
+    contacts: ['contacts', 'contact'],
     positions: ['positions', 'position'],
     profiles: [
       'profiles',
@@ -25,13 +30,18 @@ module.exports = {
     awards: ['awards'],
     honors: ['honors'],
     additional: ['additional'],
-    certification: ['certification', 'certifications'],
-    interests: ['interests'],
+    certification: [
+      'certification',
+      'certifications',
+      'Licenses & Certifications',
+    ],
+    interests: ['interests', 'extra curricular'],
   },
   profiles: [
     [
       'github.com',
-      function(url, Resume, profilesWatcher) {
+      function (url, Resume, profilesWatcher) {
+        console.log({ url });
         let reconstructedURL = null;
         try {
           reconstructedURL = new URL(url);
@@ -43,45 +53,32 @@ module.exports = {
           reconstructedURL = new URL(base, githubURL);
           console.log('Corrected to my best attempt: ', reconstructedURL.href);
         }
-        download(reconstructedURL.href, function(data, err) {
+        download(reconstructedURL.href, function (data, err) {
           if (data) {
             var $ = cheerio.load(data),
-              fullName = $('.vcard-username')
-                .text()
-                .trim(),
-              location = $('.octicon-location')
-                .parent()
-                .text()
-                .trim(),
+              fullName = $('.vcard-username').text().trim(),
+              location = $('.octicon-location').parent().text().trim(),
               followers = $('.octicon-people')
                 .siblings('.color-fg-default')
                 .text(),
-              mail = $('.octicon-mail')
-                .parent()
-                .text(),
-              link = $('.octicon-link')
-                .parent()
-                .text(),
-              clock = $('.octicon-clock')
-                .parent()
-                .text(),
-              company = $('.octicon-organization')
-                .parent()
-                .text(),
+              mail = $('.octicon-mail').parent().text(),
+              link = $('.octicon-link').parent().text(),
+              clock = $('.octicon-clock').parent().text(),
+              company = $('.octicon-organization').parent().text(),
               repositories = $('.octicon-repo')
                 .next()
                 .text()
                 .trim()
                 .split('\n')
-                .join('\n')
-              contributions = $('.js-yearly-contributions')
-                .children()
-                .children()
-                .siblings('.f4')
-                .text()
-                .trim()
-                .split('\n')[0]
-                
+                .join('\n');
+            contributions = $('.js-yearly-contributions')
+              .children()
+              .children()
+              .siblings('.f4')
+              .text()
+              .trim()
+              .split('\n')[0];
+
             Resume.addObject('github', {
               name: fullName,
               location: location,
@@ -91,7 +88,7 @@ module.exports = {
               company: company,
               followers: followers,
               repositories: repositories,
-              contributions: contributions
+              contributions: contributions,
             });
           } else {
             return console.log(err);
@@ -103,7 +100,7 @@ module.exports = {
     ],
     [
       'linkedin.com',
-      function(url, Resume, profilesWatcher) {
+      function (url, Resume, profilesWatcher) {
         let reconstructedURL = null;
         try {
           reconstructedURL = new URL(url);
@@ -111,11 +108,13 @@ module.exports = {
           console.log('Dismorphed url for Linkedin, correcting it.');
           const sections = url.split('/');
           const linkedinURL = 'https://linkedin.com';
-          const base = `/in/${sections.length > 0 ? sections[sections.length - 1] : ''}`;
+          const base = `/in/${
+            sections.length > 0 ? sections[sections.length - 1] : ''
+          }`;
           reconstructedURL = new URL(base, linkedinURL);
           console.log('Corrected to my best attempt: ', reconstructedURL.href);
         }
-        download(reconstructedURL.href, function(data, err) {
+        download(reconstructedURL.href, function (data, err) {
           if (data) {
             var $ = cheerio.load(data),
               linkedData = {
@@ -151,7 +150,7 @@ module.exports = {
               period: $currentPosition.find('.experience-date-locale').text(),
             };
             // past positions
-            _.forEach($pastPositions, function(pastPosition) {
+            _.forEach($pastPositions, function (pastPosition) {
               var $pastPosition = $(pastPosition);
               linkedData.positions.past.push({
                 title: $pastPosition.find('header > h4').text(),
@@ -160,13 +159,13 @@ module.exports = {
                 period: $pastPosition.find('.experience-date-locale').text(),
               });
             });
-            _.forEach($languages, function(language) {
+            _.forEach($languages, function (language) {
               linkedData.languages.push($(language).text());
             });
-            _.forEach($skills, function(skill) {
+            _.forEach($skills, function (skill) {
               linkedData.skills.push($(skill).text());
             });
-            _.forEach($educations, function(education) {
+            _.forEach($educations, function (education) {
               var $education = $(education);
               linkedData.educations.push({
                 title: $education.find('header > h4').text(),
@@ -174,10 +173,10 @@ module.exports = {
                 date: $education.find('.education-date').text(),
               });
             });
-            _.forEach($volunteeringListing, function(volunteering) {
+            _.forEach($volunteeringListing, function (volunteering) {
               linkedData.volunteering.push($(volunteering).text());
             });
-            _.forEach($volunteeringOpportunities, function(volunteering) {
+            _.forEach($volunteeringOpportunities, function (volunteering) {
               linkedData.volunteeringOpportunities.push($(volunteering).text());
             });
 
@@ -194,19 +193,22 @@ module.exports = {
     'stackoverflow.com',
   ],
   inline: {
-    //address: 'address',
+    address: 'address',
     skype: 'skype',
   },
   regular: {
     name: [/([A-Z][a-z]*)(\s[A-Z][a-z]*)/],
     email: [/([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})/],
-    phone: [/((?:\+?\d{1,3}[\s-])?\(?\d{2,3}\)?[\s.-]?\d{3}[\s.-]\d{4,5})/],
+    phone: [
+      // /((?:\+?\d{1,3}[\s-])?\(?\d{2,3}\)?[\s.-]?\d{3}[\s.-]\d{4,5})/,
+      /((?:\+?\d{1,3}[\s-])?\(?\d{2,4}\)?[\s.-]?\d{2,4}[\s.-]?\d{2,4}[\s.-]?\d{2,4})/,
+    ],
   },
 };
 
 // helper method
 function download(url, callback) {
-  request(url, function(error, response, body) {
+  request(url, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       callback(body);
     } else {

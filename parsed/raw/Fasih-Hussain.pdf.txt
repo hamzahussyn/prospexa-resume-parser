@@ -1,0 +1,60 @@
+FASIH HUSSAIN
+S o f t w a r e E n g i n e e r
+ADDRESS: Karachi, Pakistan
+EMAIL: fasihhussain00@gmail.com
+PHONE: +92-317-1067141
+PROFILE
+A motivated Software Engineer with
+over a year of experience developing
+API applications in .NET Core & NodeJS,
+seeking a position in a growth-oriented
+company where I can use my skills to
+the advantage of the company while
+having the scope to develop my skills. I
+am a quick learner and always eager to
+step out of my comfort zone to learn
+new skills and technologies.
+SKILLS
+WORK EXPERIENCE
+Programming Languages (C#, Java,
+JavaScript, Python)
+Frameworks (.Net Core, Flutter, Node)
+Database (SQL, MySQL)
+Scripting Languages (Bash)
+OS (Linux, Windows)
+Cloud (docker)
+TECHNICAL SKILLS
+SOFT SKILLS
+Fast Learner
+Adaptive
+Critical Thinking
+Problem Solving
+Communication
+Aug 2021 - Ongoing
+Software Engineer
+Techosol360 / Karachi, Pakistan
+Working as a software engineer, developing web applications and API's
+with microservice and layered architecture using .NET & NodeJS. Familiar
+with concepts of Solid principles, Design patterns etc. Designing and
+building DB Structure and architecture.
+- GFE-System Health API (NodeJS)
+Performed crud operation on customers, directors, doctors,
+patients, GFE and treatments. Create meeting using agora API,
+live chat using WebSocket.
+- Subscription System API (.NET Core)
+A Microservice service for LMS Project to create plans of products
+subscribe users with those products plan by creating invoice and
+by add payment of those invoices
+EDUCATION
+Sep 2018 - Ongoing
+- Face Recognition System
+Developed a robust Face Recognition Software using Machine
+Learning algorithm to train a given dataset of 21 people. Gaining
+the best accuracy amongst all others that were developed.
+- IVR System (Best Computer Network's Project Award)
+Developed a complete Interactive Voice Response (IVR) System of
+the university using asterisk on Linux, including a panel to keep
+track of all the calls and their recordings
+BACHELORS IN COMPUTER SCIENCE
+Salim Habib University
+{end}

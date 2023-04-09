@@ -1,0 +1,49 @@
+A-76 Alfalah Housing Society, Shahfaisal
+Town, Karachi
+syedaltamashmasroor@gmail.com
+ALTAMASH
+MASROOR
+ASSOCIATE SQA ANALYST
++923332432006
+VC List (3 consecutive semesters)
+Deans List (3 consecutive semesters)
+Best Project in C++
+I am a self-motivated professional passionate about
+quality control. I bring to this position a hands-on
+approach in the testing of software systems. I have a solid
+understanding of QA methodologies used in the industry
+and the Software Development Life Cycle (SDLC). My
+areas of expertise extend to cover Test Plans and Test
+Cases Development, Configuration, and Troubleshooting.
+PROFESSIONAL
+EXPERIENCE
+Associate SQA Analyst " June 2021-Present
+DigiTex Pvt. Ltd
+Participated in Scrum and StandUp meetings, reviews, and
+developed test scenarios.
+Created and executed manual test cases for web
+applications.
+Intern SQA Analyst " Jan 2020-May 2020
+DigiTex Pvt. Ltd
+Consistently recognized for excellent problem-
+solving and analytical skills by programmers, and
+project managers.
+Worked collaboratively with QA, development and
+business groups to complete comprehensive
+testing on DigiTest. (EdTech)
+SKILLS
+AWARD
+EDUCATION
+Bachelors in Computer Science
+SALIM HABIB UNIVERSITY " 2020-PRESENT
+Intermediate in Computer Science
+NASRA COLLEGE "
+SQA Tools & Best Practices
+Test Cases, Plans & Scripts
+Defect & Bug Discovery
+Technical Specification Analysis
+Tracking,Logging & Reporting
+Program Logic & Optimization
+Software Architecture Technologies
+Issue Identification
+{end}

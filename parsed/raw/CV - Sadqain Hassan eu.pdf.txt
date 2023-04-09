@@ -1,0 +1,88 @@
+Sadqain Hassan
+Gender: Male Date of birth: 31/12/1994 Nationality: Pakistani
+Home : House # N-2 sector 5-L North karachi, 75850, Karachi, Pakistan
+Email: Saadkaxmi@gmail.com
+Phone: (+92) 3312297990
+Whatsapp Messenger: +923312297990
+LinkedIn: https://www.linkedin.com/in/sadqain-kazmi
+ABOUT ME
+I am Sadqain Hassan Kazmi , a Software Engineer & a System Architect.
+I have 6+ years of experience in Software Development including Web Application
+Development , Hybrid Mobile Application Development , MEANstack based Applications
+(Nodejs / Angular) , Rendering Engines , PropTech , FinTech, HealthTech
+I also have experience with AWS , Python
+WORK EXPERIENCE
+[ 01/08/2022 – 31/12/2022 ]
+Software development manager
+Nexus Corporation
+City: Karachi
+Country: Pakistan
+- Creating Timelines for product Development
+- Helping Developers in Coding
+- Managing Multiple Teams
+- Creating Roadmap for upcoming Feature sets
+[ 01/03/2022 – 01/08/2022 ]
+Senior Fullstack Engineer - Team Lead
+Sixlogs Technologies
+City: Karachi
+Country: Pakistan
+- Responsible for creating Architecture of the product
+- Responsible for team management
+- Create task for the team
+- Create Microservice Based backend on Nodejs
+- Customize Angular 13 theme for product
+- Collaboration with Product Owners
+- Create Infrastructure on AWS
+[ 01/06/2021 – 01/07/2022 ]
+Senior Software Engineer - Team Lead
+Finspace Group UK
+City: Karachi
+Country: Pakistan
+- Responsible for Creating Team for Proptech Fintech Product
+- Responsible for Creating Backend of Product
+- Responsible to Create AWS infrastructure
+- Responsible to conduct and requirements from UK team
+[ 01/09/2018 – 01/06/2021 ]
+Senior Fullstack Developer
+Sixlogs Technologies
+City: Karachi
+Country: Pakistan
+- Worked on Various US based Projects
+Other language(s):
+English
+LISTENING C1 READING C1 WRITING C1
+SPOKEN PRODUCTION B2 SPOKEN INTERACTION B2
+- Majorly worked on Nodejs / Angular
+- Created 3D rendering Engine for Clothing app
+- Developed Police department App for US City Westchase
+- Developed Custom CMS and Webapp for US based client
+- Developed Hybrid product app for clothing
+- Created Generic Scrapper tool on python
+[ 01/01/2018 – 01/09/2018 ]
+MeanStack Developer
+UTF labs
+City: Karachi
+Country: Pakistan
+- Worked on the Third crypto currency exchange of pakistan (Nodejs / Angular )
+- Worked on the Grid metering app (Angular)
+[ 06/07/2017 – 30/12/2017 ]
+Hybrid Mobile Application Developer
+5 Star Designer
+City: Karachi
+Country: Pakistan
+- Created Various Hybrid Mobile Apps on Ionic V3 and Angular 4
+EDUCATION AND
+TRAINING
+[ 01/07/2014 – 30/06/2018 ]
+Bachelor's of Science - Computer Science
+PAF - KIET
+Address: Karachi, Pakistan
+DIGITAL SKILLS
+Nodejs " Angular " AWS " API integration " RESTful api " JSON " Github " MySQL "
+Git " SQL " Web Development " Object-Oriented Programming " HTML " JavaScript "
+Web API " Postman " REST " Typescript " Git/SVC " CI/CD " Relational databases "
+Microservices " PostgreSQL " NoSQL " MVC " Docker " Unit Testing " Jira " Code
+Review " Agile (Scrum)
+LANGUAGE SKILLS
+Mother tongue(s): Urdu
+{end}

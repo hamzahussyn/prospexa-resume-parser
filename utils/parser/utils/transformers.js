@@ -1,6 +1,6 @@
 module.exports = {
   removeNonAlphaNumeric,
-  experienceInYears
+  experienceInYears,
 };
 
 function removeNonAlphaNumeric(resumeObj) {
@@ -8,7 +8,7 @@ function removeNonAlphaNumeric(resumeObj) {
 
   for (field in resumeObj.parts) {
     if (field === 'github') continue;
-    console.log(resumeObj.parts[field]);
+    // console.log(resumeObj.parts[field]);
     resumeObj.parts[field].replace(regex, '');
   }
 
@@ -17,23 +17,23 @@ function removeNonAlphaNumeric(resumeObj) {
 
 function experienceInYears(resumeObj) {
   const regex = new RegExp(/[(0-9)][(0-9)][(0-9)][(0-9)]/g);
-  const experience = resumeObj.parts.experience.toLowerCase();
+  const experience = resumeObj?.parts?.experience?.toLowerCase();
 
-  if(!experience.length) {
+  if (!experience?.length) {
     return 0;
   }
 
   let upperBound = null;
   let lowerBound = null;
   let yearsArr = null;
-  let isPursuing = experience.match(/present/g);
+  let isPursuing = experience?.match(/present/g);
 
-  if(isPursuing.length) {
+  if (isPursuing?.length) {
     let date = new Date();
     upperBound = date.getFullYear();
   }
 
-  const matches = experience.match(regex); 
-  yearsArr = matches.map(_ => +_);
+  const matches = experience?.match(regex);
+  yearsArr = matches?.map((_) => +_);
   console.log('matches', JSON.stringify(yearsArr));
 }

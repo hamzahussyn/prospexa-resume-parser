@@ -1,0 +1,50 @@
+Parshant Jagwani
+Apartment-209 Sahil Promenade, near Bilawal House, Clifton Block 3, Karachi
+D.O.B: 22/01/1995 " Phone: +923337068986 " Email: parshantjagwani@gmail.com " LinkedIn: parshantjagwani-
+OBJECTIVES
+Seeking an opportunity which will not only support me with relevant practises in Computer Sciences but also
+expose me to a diversified environment where I can contribute towards the organisation's growth whilst
+capitalising and enhancing my skill set.
+EDUCATION
+Shaheed Zulfiqar Ali Bhutto Institute of Science and Technology (SZABIST) Aug'15- Feb'22
+Bachelor of Science (Computer Science)
+Majors in Software Engineering, CGPA 2.34.
+Govt. Higher Secondary School, Nawabshah June'12-May'14
+Intermediate (Pre-Engineering), Board of Intermediate Education, Hyderabad
+SKILLS
+TECHNICAL
+Programming (Good): Object-Oriented Programming, Algorithms and Data Structures
+Languages: JAVA, HTML CSS, C#, C, php, MERN and React-Native
+NodeJS (Fair): Express Framework and Mongoose etc.
+Databases (Good): SQL, Relational (MySQL and SQL Server) and NoSQL (MongoDB)
+Frontend Technologies (Fair): React-Native, jQuery and AJAX
+Other Relevant Skills (Fair): ASP.NET (C#), Android App Development, GIT, and Kali Linux
+General Web (Fair): HTML5, CSS, Bootstrap etc.
+Understanding of various Software Processes, Design Patterns and N-tier System Architectures.
+INTERPERSONAL
+Learnability, Teamwork, Problem Solving, Decision Making, Critical Thinking and Analysis
+Writing & Communication skills
+EXPERIENCES
+Work Experience:
+Junior QA at TechForce Jan'22-June'22
+Used to run tests manually on different kinds of Websites and Designs.
+Perform in-depth quality assurance reviews on software.
+Test cases creation and maintenance by using Test Rails
+Perform API testing by using POSTMAN
+Create reports for the development team with details about each bug or error.
+Junior Software Engineer at System Infinites July'20-Oct'20
+Full Stack Development on C# (MVC Framework) and MySQL
+Core responsibilities include Creating and implementing Data-Base requirements.
+Project Experiences:
+Roomie-To-You - Final Year Project on C# (Web): Aug'19-May'20
+Roomie-To-You about bachelor's accommodation Hub. Where Students and Employees can find accommodation from
+finding room or roommate to daily life accommodation (likes, tiffin service, internet, laundry service, cook and water
+service). The Objective shall be to design a platform to facilitate P2P connectivity for potential users seeking shared
+accommodation in cosmopolitan areas across Pakistan, especially business/education hubs such as Karachi where many
+people migrate individually for work/studies purposes
+Volunteer Work Experiences: Hobbies:
+ZABMUN, Event management team Playing snooker
+Thalassemia blood drive Nawabshah E-Gaming
+ZAB-E-FEST Event Management Team Travelling
+Reading
+{end}

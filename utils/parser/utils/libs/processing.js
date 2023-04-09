@@ -17,7 +17,7 @@ module.exports.runUrl = processUrl;
  * @param cbAfterProcessing
  */
 function processFile(file, cbAfterProcessing) {
-  extractTextFile(file, function(PreparedFile, error) {
+  extractTextFile(file, function (PreparedFile, error) {
     if (_.isFunction(cbAfterProcessing)) {
       if (error) {
         return cbAfterProcessing(null, error);
@@ -31,7 +31,7 @@ function processFile(file, cbAfterProcessing) {
 }
 
 function processUrl(url, cbAfterProcessing) {
-  extractTextUrl(url, function(data, error) {
+  extractTextUrl(url, function (data, error) {
     if (_.isFunction(cbAfterProcessing)) {
       if (error) {
         return cbAfterProcessing(null, error);
@@ -72,28 +72,29 @@ function cleanTextByRows(data) {
  */
 function extractTextFile(file, cbAfterExtract) {
   logger.trace(file);
-  textract.fromFileWithPath(file, { preserveLineBreaks: true }, function(
-    err,
-    data
-  ) {
-    if (err) {
-      logger.error(err);
-      return cbAfterExtract(null, err);
+  textract.fromFileWithPath(
+    file,
+    { preserveLineBreaks: true },
+    function (err, data) {
+      if (err) {
+        logger.error(err);
+        return cbAfterExtract(null, err);
+      }
+      if (_.isFunction(cbAfterExtract)) {
+        data = cleanTextByRows(data);
+        var File = new PreparedFile(file, data.replace(/^\s/gm, ''));
+        cbAfterExtract(File);
+      } else {
+        logger.error('cbAfterExtract should be a function');
+        return cbAfterExtract(null, 'cbAfterExtract should be a function');
+      }
     }
-    if (_.isFunction(cbAfterExtract)) {
-      data = cleanTextByRows(data);
-      var File = new PreparedFile(file, data.replace(/^\s/gm, ''));
-      cbAfterExtract(File);
-    } else {
-      logger.error('cbAfterExtract should be a function');
-      return cbAfterExtract(null, 'cbAfterExtract should be a function');
-    }
-  });
+  );
 }
 
 function extractTextUrl(url, cbAfterExtract) {
   logger.trace(url);
-  textract.fromUrl(url, { preserveLineBreaks: true }, function(err, data) {
+  textract.fromUrl(url, { preserveLineBreaks: true }, function (err, data) {
     if (err) {
       logger.error(err);
       return cbAfterExtract(null, err);
@@ -129,18 +130,18 @@ function PreparedFile(file, raw) {
  *
  * @param Resume
  */
-PreparedFile.prototype.addResume = function(Resume) {
+PreparedFile.prototype.addResume = function (Resume) {
   this.resume = Resume;
 };
 
-PreparedFile.prototype.saveResume = function(path, cbSavedResume) {
+PreparedFile.prototype.saveResume = function (path, cbSavedResume) {
   path = path || __dirname;
 
   if (!_.isFunction(cbSavedResume)) {
     return logger.error('cbSavedResume should be a function');
   }
 
-  console.log("before save on resume", this.resume);
+  // console.log("before save on resume", this.resume);
   this.resume = removeNonAlphaNumeric(this.resume);
   experienceInYears(this.resume);
 

@@ -1,0 +1,74 @@
+MUHAMMAD SABIHUL HASAN
+Software Engineer " Data Analyst " Data Scientist
+CONTACT
+ƀ sabih.ulhasan@yahoo.com
+m-sabihul-hasan
+Muhammad Sabihul Hasan
++92 336 2441261
+SKILLS
+Programming
+Python
+C++
+HTML/CSS
+Software & Framework
+MERN
+Power BI
+Django
+Flask
+Languages
+English
+Urdu
+ACHIEVEMENTS
+1st position - Health Services
+Research and COVID 19 – 2nd
+Public Health Conference-
+AIPH - JSMU
+Dean's List Spring 2022 –
+Habib University
+Excellence Scholarship –
+Habib University
+Meritorious Award – Habib
+University
+Duke of Edinburgh's
+International Award
+WORK EXPERIENCE
+Data Scientist / Junior Software Engineer Aug 2021 - Present
+Valsium - Karachi, Pakistan
+Carried out data analysis and created relevant Machine Learning models
+for various projects " Worked on backend for the web application of the
+company-owned recruitment application
+Project Intern - Baghbaan Program Sep 2018 - Apr 2019
+The Citizens Foundation - Karachi, Pakistan
+Gathered support for a classroom of 25 students for an entire year
+EDUCATION
+Bachelors of Science in Computer Science 2018 - 2022
+Habib University - Karachi, Pakistan
+Graduated with 3.76 CGPA and a minor in Electrical Engineering
+Advanced Subsidiary & Advanced Level 2016 - 2018
+Beaconhouse College Campus North -
+Karachi, Pakistan
+3 A*s & 1 A
+Ordinary Level 2013 - 2016
+BVS Parsi High School - Karachi, Pakistan
+9 A*s & 2 As
+PROJECTS
+DOXA: A Smart Recruitment Assistant Aug 2021 - May 2022
+The AI-powered recruitment assistant is a tool that can help organiza-
+tions to streamline their recruitment process and improve the quality of
+their hires. The assistant can help to identify potential candidates, screen
+resumes, and conduct initial interviews.
+Image Augmentation Using Deep Convolu-
+tional Generative Adversarial Network
+Sep 2021 - Dec 2021
+Aimed at solving the problem of class imbalance in the Facial Emotion
+Recognition domain by generating fake images using DCGAN.
+Multi-Objective Cuckoo Search Based
+Training of Convolutional Neural Network
+Feb 2021 - May 2021
+Using Meta-heuristic algorithms to find optimal solutions at a reasonable
+computational cost. Developed an algorithm that not only decreases the
+total network parameters but also reduces the overall computation time.
+Steam Games Recommendation System Nov 2020 - Dec 2020
+Developed a recommendation system for games available on Steam plat-
+form, using collaborative filtering.
+{end}

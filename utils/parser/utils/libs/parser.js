@@ -20,9 +20,9 @@ function makeRegExpFromDictionary() {
     inline: {},
   };
 
-  _.forEach(dictionary.titles, function(titles, key) {
+  _.forEach(dictionary.titles, function (titles, key) {
     regularRules.titles[key] = [];
-    _.forEach(titles, function(title) {
+    _.forEach(titles, function (title) {
       regularRules.titles[key].push(title.toUpperCase());
       regularRules.titles[key].push(
         title[0].toUpperCase() + title.substr(1, title.length)
@@ -30,7 +30,7 @@ function makeRegExpFromDictionary() {
     });
   });
 
-  _.forEach(dictionary.profiles, function(profile) {
+  _.forEach(dictionary.profiles, function (profile) {
     var profileHandler, profileExpr;
 
     if (_.isArray(profile)) {
@@ -39,10 +39,20 @@ function makeRegExpFromDictionary() {
       }
       profile = profile[0];
     }
-    profileExpr =
-      '((?:https?://)?(?:www\\.)?' +
-      profile.replace('.', '\\.') +
-      '[/\\w\\.-]*)';
+    if (profile?.includes('github')) {
+      profileExpr =
+        /((?:https?:)?\/\/(?:[\w]+\.)?)?github\.com\/(?<login>[\w\-_]+)\/?/;
+    } else if (profile?.includes('linkedin')) {
+      profileExpr = [
+        /((?:https?:)?\/\/(?:[\w]+\.)?)?linkedin\.com\/in\/(?<permalink>[\w\-_]+)(?:\n(?=\S)|\/?)?/,
+        /(?:https?:\/\/)?(?:[\w]+\.)?linkedin\.com\/in\/([\w-]+(?:\n[\w-]+)*)(?=\/)/gim,
+      ];
+    } else
+      profileExpr =
+        '((?:https?://)?(?:www\\.)?' +
+        profile.replace('.', '\\.') +
+        '[/\\w\\.-]*)';
+
     if (_.isFunction(profileHandler)) {
       regularRules.profiles.push([profileExpr, profileHandler]);
     } else {
@@ -50,7 +60,7 @@ function makeRegExpFromDictionary() {
     }
   });
 
-  _.forEach(dictionary.inline, function(expr, name) {
+  _.forEach(dictionary.inline, function (expr, name) {
     regularRules.inline[name] = expr + ':?[\\s]*(.*)';
   });
 
@@ -67,16 +77,17 @@ function parse(PreparedFile, cbReturnResume) {
     row;
 
   // save prepared file text (for debug)
-  //fs.writeFileSync('./parsed/'+PreparedFile.name + '.txt', rawFileData);
+  fs.writeFileSync('./parsed/raw/' + PreparedFile.name + '.txt', rawFileData);
 
   // 1 parse regulars
   parseDictionaryRegular(rawFileData, Resume);
+  parseDictionaryProfiles(rawFileData?.toLowerCase(), Resume);
 
   for (var i = 0; i < rows.length; i++) {
     row = rows[i];
 
     // 2 parse profiles
-    row = rows[i] = parseDictionaryProfiles(row, Resume);
+    // row = rows[i] = parseDictionaryProfiles(row, Resume);
     // 3 parse titles
     parseDictionaryTitles(Resume, rows, i);
     parseDictionaryInline(Resume, row);
@@ -85,7 +96,7 @@ function parse(PreparedFile, cbReturnResume) {
   if (_.isFunction(cbReturnResume)) {
     // wait until download and handle internet profile
     var i = 0;
-    var checkTimer = setInterval(function() {
+    var checkTimer = setInterval(function () {
       i++;
       /**
        * FIXME:profilesWatcher.inProgress not going down to 0 for txt files
@@ -136,7 +147,7 @@ function countWords(str) {
 function parseDictionaryInline(Resume, row) {
   var find;
 
-  _.forEach(dictionary.inline, function(expression, key) {
+  _.forEach(dictionary.inline, function (expression, key) {
     find = new RegExp(expression).exec(row);
     if (find) {
       Resume.addKey(key.toLowerCase(), find[1]);
@@ -153,8 +164,8 @@ function parseDictionaryRegular(data, Resume) {
   var regularDictionary = dictionary.regular,
     find;
 
-  _.forEach(regularDictionary, function(expressions, key) {
-    _.forEach(expressions, function(expression) {
+  _.forEach(regularDictionary, function (expressions, key) {
+    _.forEach(expressions, function (expression) {
       find = new RegExp(expression).exec(data);
       if (find) {
         Resume.addKey(key.toLowerCase(), find[0]);
@@ -177,11 +188,11 @@ function parseDictionaryTitles(Resume, rows, rowIdx) {
     isRuleFound,
     result;
 
-  _.forEach(dictionary.titles, function(expressions, key) {
+  _.forEach(dictionary.titles, function (expressions, key) {
     expressions = expressions || [];
     // means, that titled row is less than 5 words
     if (countWords(row) <= 5) {
-      _.forEach(expressions, function(expression) {
+      _.forEach(expressions, function (expression) {
         ruleExpression = new RegExp(expression);
         isRuleFound = ruleExpression.test(row);
 
@@ -213,7 +224,7 @@ function parseDictionaryProfiles(row, Resume) {
   var regularDictionary = dictionary.profiles,
     find,
     modifiedRow = row;
-  _.forEach(regularDictionary, function(expression) {
+  _.forEach(regularDictionary, function (expression) {
     var expressionHandler;
 
     if (_.isArray(expression)) {
@@ -222,13 +233,44 @@ function parseDictionaryProfiles(row, Resume) {
       }
       expression = expression[0];
     }
+
+    if (_.isArray(expression)) {
+      var results = [];
+      _.forEach(expression, function (exp) {
+        find = new RegExp(exp).exec(row);
+        if (find) {
+          if (
+            !Resume?.parts?.['profiles']?.includes(find[0]) &&
+            !find[0]?.includes(Resume?.parts?.['profiles'])
+          ) {
+            results.push(find[0]);
+          }
+        }
+      });
+      if (results.length) {
+        let cleaned = results.at(-1).split('\n').join('');
+        Resume.addKey('profiles', cleaned);
+        modifiedRow = row.replace(cleaned, '');
+        if (_.isFunction(expressionHandler)) {
+          profilesWatcher.inProgress++;
+          expressionHandler(cleaned, Resume, profilesWatcher);
+        }
+      }
+      return modifiedRow;
+    }
+
     find = new RegExp(expression).exec(row);
     if (find) {
-      Resume.addKey('profiles', find[0] + '\n');
-      modifiedRow = row.replace(find[0], '');
-      if (_.isFunction(expressionHandler)) {
-        profilesWatcher.inProgress++;
-        expressionHandler(find[0], Resume, profilesWatcher);
+      if (
+        !Resume?.parts?.['profiles']?.includes(find[0]) &&
+        !find[0]?.includes(Resume?.parts?.['profiles'])
+      ) {
+        Resume.addKey('profiles', find[0]);
+        modifiedRow = row.replace(find[0], '');
+        if (_.isFunction(expressionHandler)) {
+          profilesWatcher.inProgress++;
+          expressionHandler(find[0], Resume, profilesWatcher);
+        }
       }
     }
   });
