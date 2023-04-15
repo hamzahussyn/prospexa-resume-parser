@@ -115,6 +115,7 @@ module.exports = {
           console.log('Corrected to my best attempt: ', reconstructedURL.href);
         }
         download(reconstructedURL.href, function (data, err) {
+          console.log({ data });
           if (data) {
             var $ = cheerio.load(data),
               linkedData = {
