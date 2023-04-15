@@ -1,9 +1,9 @@
 const express = require('express');
-const handlebars = require('express-handlebars');
+const exhbs = require('express-handlebars');
 const dotenv = require('dotenv').config();
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
-const multer = require('multer');
+const handlebars = require('handlebars');
 
 const { connectDB } = require('./providers/database');
 const { AuthController } = require('./controllers/auth.controller');
@@ -12,9 +12,13 @@ const { MVPController } = require('./controllers/mvp.controller');
 
 // connectDB();
 
+handlebars.registerHelper('eq', function (a, b) {
+  return a === b;
+});
+
 const app = express();
 
-app.engine('handlebars', handlebars.engine());
+app.engine('handlebars', exhbs.engine());
 app.set('view engine', 'handlebars');
 
 app.use(helmet());

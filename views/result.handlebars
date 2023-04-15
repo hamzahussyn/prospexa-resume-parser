@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Prospexa Resume Parser</title>
+    <style>
+      body { font-family: sans-serif; background-color: #f2f2f2; margin: 0;
+      padding: 0; } header { background-color: #333; color: #fff; padding: 10px;
+      text-align: center; } h1 { margin: 0; font-size: 24px; } form { margin:
+      20px; padding: 20px; border: 1px solid #ccc; background-color: #fff;
+      max-width: 600px; margin: 1rem auto; } input[type="file"] { display:
+      block; margin-bottom: 10px; } button[type="submit"] { background-color:
+      #333; color: #fff; border: none; padding: 10px 20px; font-size: 16px;
+      cursor: pointer;} table { width: 95%; margin: 0 auto; padding: 1rem;} a {
+      color: #fff; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href='/mvp'>
+          Prospexa Resume Parser
+        </a>
+      </h1>
+    </header>
+    <table>
+      {{#each result}}
+        {{#if this}}
+          <tr>
+            <td>{{@key}}</td>
+            {{#if (eq @key 'github')}}
+              <td>
+                <ul>
+                  {{#each this}}
+                    <li>{{@key}}: {{this}}</li>
+                  {{/each}}
+                </ul>
+              </td>
+            {{else}}
+              <td>{{this}}</td>
+            {{/if}}
+          </tr>
+        {{/if}}
+      {{/each}}
+    </table>
+  </body>
+</html>

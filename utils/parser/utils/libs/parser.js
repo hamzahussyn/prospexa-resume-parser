@@ -201,7 +201,6 @@ function parseDictionaryTitles(Resume, rows, rowIdx) {
           allTitles = _.without(allTitles.split('|'), key).join('|');
           searchExpression =
             '(?:' + expression + ')((.*\n)+?)(?:' + allTitles + '|{end})';
-          console.log({ searchExpression });
           // restore remaining text to search in relevant part of text
           result = new RegExp(searchExpression, 'gm').exec(
             restoreTextByRows(rowIdx, rows)
