@@ -8,7 +8,7 @@ const multer = require('multer');
 const { connectDB } = require('./providers/database');
 const { AuthController } = require('./controllers/auth.controller');
 const { handleError } = require('./utils/exceptions');
-const upload = multer({ dest: 'resume/' });
+const { MVPController } = require('./controllers/mvp.controller');
 
 // connectDB();
 
@@ -22,17 +22,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/auth', AuthController);
+app.use('/mvp', MVPController);
 
 app.get('/', function (request, response, next) {
   response.status(200).json({ message: 'creds-backend' });
-});
-
-app.get('/form', function (request, response, next) {
-  response.render('form', { layout: false, title: 'Prospexa Resume Parser' });
-});
-
-app.post('/form', upload.single('file'), function (request, response) {
-  console.log(request.file);
 });
 
 app.use((err, req, res, next) => handleError(err, res));
