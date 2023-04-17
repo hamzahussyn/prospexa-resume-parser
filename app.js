@@ -1,20 +1,19 @@
 const express = require('express');
+const handlebars = require('handlebars');
 const exhbs = require('express-handlebars');
 const dotenv = require('dotenv').config();
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
-const handlebars = require('handlebars');
 
 const { connectDB } = require('./providers/database');
 const { AuthController } = require('./controllers/auth.controller');
-const { handleError } = require('./utils/exceptions');
 const { MVPController } = require('./controllers/mvp.controller');
+const { handleError } = require('./utils/exceptions');
+const { checkEquals } = require('./utils/handlebars');
 
 // connectDB();
 
-handlebars.registerHelper('eq', function (a, b) {
-  return a === b;
-});
+handlebars.registerHelper('eq', checkEquals);
 
 const app = express();
 
