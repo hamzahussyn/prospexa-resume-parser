@@ -16,7 +16,9 @@ function removeNonAlphaNumeric(resumeObj) {
 }
 
 function experienceInYears(resumeObj) {
-  const regex = new RegExp(/[(0-9)][(0-9)][(0-9)][(0-9)]/g);
+  const regex = new RegExp(
+    /(\d{1,2}\/\d{4})\s*-\s*((\d{1,2}\/\d{4})|Present)/g
+  );
   const experience = resumeObj?.parts?.experience?.toLowerCase();
 
   if (!experience?.length) {
