@@ -1,0 +1,85 @@
+Mahesh Kumar
+Software Engineer
+Seeking exciting opportunities associated with
+the Computer Science, acquiring new skills related
+to Backend & Frontend Development. Diving into
+the curious world of Software Engineering.
+Interested in exploring various elds related to
+Computer Science and thriving exciting
+opportunities associated with the same.
+maheshkumarpunshi@gmail.com
+03352424324
+Karachi, Pakistan
+linkedin.com/in/maheshkumar1999
+@MaheshK06782951
+WORK EXPERIENCE
+Digital Forms ANALYST
+IDEA BOX
+12/2021 - Present, Karachi
+Software House
+Handle DF Support Tickets
+Digital Forms Mapping and Generation
+Problem solving / analysis for reported issues
+Communicates to the Project Managers
+Generate EDI Files from client provided data
+SEO Content Writer
+Shah Techno
+Karachi
+SEO Based Startup
+Researching industry-related topics
+Utilize industry best practices and familiarity with the
+organization's mission to inspire ideas and content
+INTERNEE
+REDBOX (DEVELOPMENT DEPARTMENT)
+07/2018 - 09/2018, KARACHI
+Data Entry and Website Management Tasks
+Photoshop Tasks
+EDUCATION
+Bachelors in Computer Science
+SZABIST, Karachi
+08/2017 - Present, Pakistan
+Higher Secondary Education
+Tabani's College
+05/2015 - 05/2017, Karachi
+Matriculation
+Shaheen Public Higher Secondary School
+05/2013 - 05/2015, Mirpur Mathelo
+SKILLS
+C C++ C# JAVA OOP NODEJS
+REACT JS REACT NATIVE FIREBASE
+ASP.NET MVC JAVASCRIPT SQL DATABASE
+MongoDB
+PROJECTS
+House RENTAL SYSTEM (2nd Semester)
+Using Java and OOP concepts. This project has a idea features like
+sign up ,sign in and users were give the house details. They had a
+facility to contact with the owner.
+STUDENT MCQS BASED EXAMINATION
+Using C , our group created passionately a whole MCQS based
+examination system in our rst semester using lesystems. The
+project was assigned to us by our course instructor.
+Students MCQS BASED EXAMINATION
+Using C# , Developed a C# Desktop application which had a nicely
+designed GUI for the MCQS based system with extra feature than
+earlier console C project such as SKIP QUESTION (to attempt later).
+Bachelor's Residencia (FYP)
+Using REACT JS and REACT NATIVE. The idea behind this project is
+like providing a platform to the Bachelor's all over the Pakistan that
+doesn't have any kind of platform yet. It is based on their
+accommodations.
+ACHIEVEMENTS
+Class Representative in Intermediate
+LANGUAGES
+English
+Professional Working Pro ciency
+Urdu
+Full Professional Pro ciency
+Sindhi
+Native or Bilingual Pro ciency
+INTERESTS
+Cyber Security Back-End Development Crypto
+Electric Vehicles
+Achievements/Tasks
+Achievements/Tasks
+Achievements/Tasks
+{end}

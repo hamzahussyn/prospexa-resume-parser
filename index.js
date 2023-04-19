@@ -2,7 +2,7 @@
 
 var resumeParser = require('./utils/parser');
 var fs = require('fs');
-// var resume = 'AbdullahMansoorResume-Latest.pdf';
+// var resume = 'M.AMIR KHAN_IT Coordinator_13_YOE.pdf';
 var resume = null;
 
 function parser(name, cb) {

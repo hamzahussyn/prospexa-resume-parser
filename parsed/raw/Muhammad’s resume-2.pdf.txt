@@ -1,0 +1,74 @@
+Muhammad Hassaan
++92 331 5870168 " House No # 63 B-Block Satellite Town, Rahim Yar Khan, 64200, Pakistan
+hassaanhameed786@gmail.com " https://hassaanhameed786.wordpress.com/ " https://github.com/hassaanhameed786
+________________________________________________________________________________
+Education
+BSCS (Hons) Bachelor in Computer science
+2022, FAST NUCES Courses included Programming, Databases, Algorithms, Operating Systems,
+Probability & Statistics, Advanced Programming, Natural Language Processing,
+Bioinformatics along with various management and mathematical electives.
+Fsc(Pre-Medical)
+2017, Sheikh Zayed Public Courses included Biology, Chemistry, Physics,
+School & College R.Y.K and Mathematics.
+Matric
+2014, Sheikh Zayed Public Courses included Biology, Chemistry, Physics,
+School & College R.Y.K and Mathematics.
+________________________________________________________________________________
+Programming Skills
+Programming Languages Skilled in Python, C++, Swift, Javascript
+Cloud Computing Working knowledge of AWS Lambda, S3, RDS and cloud9
+System Administration Apache, PHPmyadmin, Docker Container using puppet
+Web Frameworks Nodejs,React,Express,Streamlit,Svelte
+Databases Skilled in implementation of MySQL, MS SQL Server, and MongoDB
+Machine Learning Have worked in State of the art models(KNN, K-Mean,
+Linear regression, Naive Bayes and Segmentation Models UNET, RESNET
+ClusteringNeural Networks and Deep Neural Networks and language models
+_____________________________________________________________________________________
+Projects
+Decision System for Finding Polyp Region in Human body using Deep Learning Models
+(Computer Vision, Machine Learning ) Final Year Project
+Trained U-Net(CNN), Res-Net(Residual CNN), Double U-Net, Deeplabv3 Architectures, Performed Variously
+Augmentation Techniques to increase the size of the dataset also removed specular reflection through Inpainting and
+Clahe method, applied Ensembling methods to generate Results. Finally made a Web Simulation connected with
+Firebase using Streamlit to Automate our Work and Generate Patient Reports
+Tech: Kaggle, Python, OpenCV, TensorFlow, Streamlit, Firebase, Keras,scikit learn
+Android VPN App(Provide Free VPN Services with Multiple Servers)
+Created VPN in Java Android Studio with sockets to that provide free servers and Data Usage Tracking
+Tech: Android Studio, Java, JDK, Firebase, Sockets
+Github Finder
+It can search Github profiles and top repositories. This app uses the Context API along with the useContext and
+useReducer hooks for state management.
+Tech: OOP: ES5 prototypes, inheritance, ES2015 classes & sub-classes, constructors Async JS Fetch API, callbacks,
+promises, async / await Arrow functions, template strings
+https://github.com/hassaanhameed786/Github-user-finder
+Restaurant Database & Dashboard (fiver project)
+Create a Data Modeling & Dashboard for the Restaurant's Sample of 3-year
+Tech: Microsoft Power BI, MysqlServer, PhpMyAdmin, LucidChart, and MS Excel
+Landmarks (IOS)
+An app for discovering and sharing places and users can flag their favourite places, and filter the list to show just
+their favourites
+Tech: Stacks,MapKit,Swift,SwiftUI,CoreLocation,xcode
+https://github.com/hassaanhameed786/ios_learning-
+Store Locator (fiver project)
+Create a store locator using a google map API to find the stores nearby
+Tech:React.js Javascript, Sass, Node.js, Google maps API,bootstrap,jquery,html.mysql
+https://github.com/hassaanhameed786/Store-Locator
+___________________________________________________________________________________
+Work Experience(freelance)
+Python Developer
+Integrating user-facing elements using server-side logic.
+Develop and manage well-functioning databases and applications
+Write technical documentation
+___________________________________________________________________________________
+Certifications
+Project-based Text Mining in Python
+Udemy
+Exploratory Data Analysis for Machine Learning
+IBM
+Svelte Crash Course through Projects w/ Backend Connections
+Udemy
+___________________________________________________________________________________
+Research and Publications
+Medieval Multimedia Evaluation benchmark Challenge participation in Medical Image Segmentation
+Link of the working paper Medical Image Segmentation The Medico
+{end}

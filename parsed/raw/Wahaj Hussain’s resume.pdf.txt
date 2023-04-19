@@ -1,0 +1,72 @@
+OBJECTIVE
+A motivated individual with
+in-depth knowledge of
+languages and development
+tools, looking for a position in
+a growth-oriented company
+where I can use my skills to
+the advantage of the
+company. I am interested in
+the role of a software
+engineer where I can
+contribute my analytical skills
+and knowledge by pursuing
+my degree in software
+engineering.
+SKILLS
+Database Modeling
+SQL Server
+Oracle
+Web Development
+Linux Operating
+System
+Programming
+Languages (Python,
+PHP, HTML, CSS, Java,
+JavaScript, C#)
+Machine Learning
+DJANGO
+ASP .NET Framework
+ASP .NET Web Forms
+MVC Framework
+Software Quality
+Assurance
+Technical Writing
+EDUCATION
+BACHELOR OF SCIENCE IN SOFTWARE ENGINEERING JUNE 2022
+SIR SYED UNIVERSITY OF ENGINEERING AND TECHNOLOGY,
+KARACHI
+EXPERIENCE
+WEB DEVELOPER INTERN UNIVERSAL SERVICES (PVT) LIMITED,
+KARACHI JANUARY 2021 – JUNE 2021
+Designed Front End for the Websites and update them
+according to the need.
+Assisted in creating website layout / user interface by
+using standard HTML / CSS practices
+Assisted in creating and maintaining software
+documentation
+JUNIOR SOFTWARE DEVELOPER BAHRIA TOWN KARACHI
+JULY 2022 – PRESENT
+Working on ASP.Net Web Forms Application and
+update them according to the need.
+Assisted in creating website layout / user interface by
+using DevExpress Tool.
+Assisted in creating and maintaining new
+Software developments with Senior's and
+perform task which is given.
+Working on complex queries in Oracle
+Database.
+CERTIFICATIONS
+ARTIFICIAL INTELLIGENCE JUNE 2020 - PRESENT PRESIDENT
+INITIATIVE FOR ARTIFICIAL INTELLIGENCE AND COMPUTING (PIAIC)
+INTERNET OF THINGS (IOT) JUNE 2020 - PRESENT PRESIDENT
+INITIATIVE FOR ARTIFICIAL INTELLIGENCE AND COMPUTING (PIAIC)
+CISCO INTERNATIONAL LINUX ESSENTIAL COURSE SEPTEMBER
+2020 CISCO NETWORKING ACADEMY
+WORDPRESS AUGUST 2020 DIGISKILLS
+SEO AUGUST 2020 DIGISKILLS
+WAHAJ HUSSAIN
+SOFTWARE ENGINEER
+Email: shaikhwahaj4@gmail.com
+MOBILE NO: 03403255982
+{end}

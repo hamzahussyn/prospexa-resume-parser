@@ -1,0 +1,36 @@
+Abdul Hannan
+Karāchi, Sindh, Pakistan
+ah350868@gmail.com
+linkedin.com/in/abdulhannank
+Summary
+BSCS graduate offering a strong
+foundation in software engineering and
+programming principles across multiple platforms.
+Experienced in object-oriented programming;
+developing, testing and debugging code; designing
+interfaces; and administering systems and networks.
+Quickly learn and master new technologies;
+successful working in both team and self-directed settings.
+"First, solve the problem. Then, write the code."
+Experience
+Software Engineer
+TechSol360
+Mar 2022 - Present (2 months +)
+Software Engineer
+DigiTest
+Jan 2021 - Mar 2022 (1 year 3 months)
+Implement the web application using MEAN Stack technologies
+( MongoDB, Express, Angular 2, Node.js ) along with HTML5, CSS3,
+JavaScript, Bootstrap and manage application deployments and CI/CD and other web technologies.
+Education
+Barrett Hodgson University
+Bachelor's degree, Computer Science
+2020 - 2024
+Government National College Karachi
+Intermediate, Computer Science
+Apr 2019 - Apr 2021
+Skills
+JavaScript AngularJS Bootstrap Node.js MongoDB Linux DevOps Databases
+Continuous Integration and Continuous Delivery (CI/CD) Amazon Web Services (AWS)
+Abdul Hannan - page 1
+{end}

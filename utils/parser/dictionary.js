@@ -115,7 +115,7 @@ module.exports = {
           console.log('Corrected to my best attempt: ', reconstructedURL.href);
         }
         download(reconstructedURL.href, function (data, err) {
-          console.log({ data });
+          // console.log({ data });
           if (data) {
             var $ = cheerio.load(data),
               linkedData = {
@@ -201,7 +201,6 @@ module.exports = {
     name: [/([A-Z][a-z]*)(\s[A-Z][a-z]*)/],
     email: [/([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})/],
     phone: [
-      // /((?:\+?\d{1,3}[\s-])?\(?\d{2,3}\)?[\s.-]?\d{3}[\s.-]\d{4,5})/,
       /((?:\+?\d{1,3}[\s-])?\(?\d{2,4}\)?[\s.-]?\d{2,4}[\s.-]?\d{2,4}[\s.-]?\d{2,4})/,
     ],
   },

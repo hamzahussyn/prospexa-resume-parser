@@ -1,0 +1,89 @@
+Bilal Ul Haque
+Web Developer
+Karachi, Sindh
++92 (345) 2156788
+bilalulhaque16@gmail.com
+linkedin.com/in/bilal-ul-haque/
+github.com/bilalulhaque
+An energetic, competent, and enthusiastic learner with a thorough understanding of frontend frameworks,
+backend technology and, design tools. 2+ years of professional expertise in the areas of solution design and
+development. Python, open-source technologies, JS, SQL, NOSQL, and Docker are among my moderate skills.
+I'm looking to strengthen my skills under the supervision of senior developers.
+Nov 2020 - Current
+July 2020 - Oct 2020
+Web Developer
+Freelancer
+15+ prospective projects were successfully completed and delivered on time with a 5-star rating.
+Internee
+NASH
+Worked on Rest API using AJAX fetching techniques and implemented different wire-frames designs on
+web apps using HTML/CSS/JS
+Languages/Frameworks: Python, PHP, Django, Flask, Node JS
+Operating Systems: Windows, Linux
+Web Client-Side Technologies: HTML, CSS, JavaScript, ReactJS
+Databases: MYSQL, SQLite, PostgreSQL
+Docker(beginner)
+Version Control tools: GIT
+2018 - 2022
+2016 - 2018
+2014 - 2016
+BS (Computer Science)
+NED University of Engineering and Technology
+Intermediate (Pre Engineering)
+Jinnah Government College
+Matriculation
+Ladybird Grammar School
+Linux Essentials Certificate
+Data Science in Python by University of MICHIGAN
+HTML, CSS and Javascript for Web Developers by John Hopkins University
+CS50's Web Programming with Python and JavaScript
+Urdu Speech To Text
+Supervised by Furqan Hussain Essani
+Users can transform any Urdu lecture into an English-subtitled lecture using this software. With the use of
+phonemes, an Automated Speech Recognition (ASR) system turns audio into a series of related words. It
+models the link between audio signal and phonetic units using an acoustic model based on Deep Neural
+Networks (DNN). The implementation is accompanied by research.
+Summary
+Work experience
+Technical Skills
+Education
+Certification
+Final Year Project
+Feb 2022
+Nov 2021
+Aug 2021
+April 2021
+Feb 2021
+Dec 2020
+Nov 2020
+Oct 2020
+TestGorilla
+Created scenario-based interview questions for Flask.
+Movies Info Site
+A small web app where the admin posts description and trailer about the movies released every
+year. User can view all of these without any registration.
+My Group Solutions – Membership Monitoring
+A web application for an organization in which the administrator can develop activities for their
+members, update their records on a regular basis, and keep track of many users.
+FotoDino – Baby Shooting Website
+An application where users can book photograph sessions for their child. Implemented front-end
+and worked on Restful API using Axios.
+Student Portal System
+A web application which facilitates teachers and students. Teachers can update students
+attendance and marks. The students can view their attendance, marks and can manage their profile.
+Shopify Sneaker Bot
+A bot to automatically buy products from the specified website at small intervals. Technologies
+used are Python Selenium.
+Nixu Awareness Portal – LMS
+A web application that raises user awareness. Admins can view the performance of their users
+using charts and graphs.
+Lets Chit Chat
+An application implemented on website where users can login through different authentication
+methods and can communicate.
+Member of Champions of Change 'Bazm-e-Aman', 2021
+Member of 19th ITCN Asia Exhibition, 2019
+Participated in HVACR and Building Services Expo Conference, 2019
+Participated in Google Hash Code, 2022
+Projects
+Extra Curricular activities
+{end}
