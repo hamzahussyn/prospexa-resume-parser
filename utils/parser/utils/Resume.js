@@ -7,7 +7,15 @@ module.exports = function () {
 function Resume() {
   // generic resume format
   this.parts = {};
+  this.rawText = '';
 }
+
+Resume.prototype.addRawText = function (value) {
+  value = value || '';
+  value = value.trim();
+  // reject falsy values
+  if (value) this.rawText = value;
+};
 
 Resume.prototype.addKey = function (key, value) {
   value = value || '';

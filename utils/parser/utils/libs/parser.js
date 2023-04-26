@@ -78,6 +78,7 @@ function parse(PreparedFile, cbReturnResume) {
 
   // save prepared file text (for debug)
   fs.writeFileSync('./parsed/raw/' + PreparedFile.name + '.txt', rawFileData);
+  Resume.addRawText(rawFileData);
 
   // 1 parse regulars
   parseDictionaryRegular(rawFileData, Resume);

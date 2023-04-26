@@ -62,7 +62,7 @@ function stringToDate(date) {
 
 function experienceInYears(resumeObj) {
   const regex = new RegExp(
-    /(((?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)'?\s\d{4})\s*(-|–)\s*((?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)'?\s\d{4}|Present|Ongoing))|((\d{2}\/)?(\d{2}\/)?(\d{4}|\d{2})\s?(-|–)\s?(Present|Ongoing|(\d{2}\/)?(\d{2}\/)?(\d{4}|\d{2})))/gi
+    /(((?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Sept(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)'?\s*(\d{4}|\d{2}))\s*(-|–)\s*((?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Sept(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)'?\s*(\d{4}|\d{2})|Present|Ongoing))|((\d{2}\/)?(\d{2}\/)?(\d{4}|\d{2})\s?(-|–)\s?(Present|Ongoing|(\d{2}\/)?(\d{2}\/)?(\d{4}|\d{2})))/gi
   );
   const regex2 = new RegExp(
     /\d+(?:\.\d+)?\+*\s*(?:year|yr|years|yrs)'*(?:\sof)?\s*experience/gi
@@ -80,7 +80,7 @@ function experienceInYears(resumeObj) {
   let dateRanges = matches.map((match) => {
     return match.split(/-|–/).map((date) => date.trim());
   });
-  // console.log({ matches, dateRanges });
+  console.log({ matches, dateRanges });
   dateRanges = dateRanges.map((date) => {
     if (date?.length) {
       return [stringToDate(date[0]), stringToDate(date[1])];
@@ -99,8 +99,9 @@ function experienceInYears(resumeObj) {
   const total = experienceRanges.reduce((total, years) => total + years, 0);
   // console.log(experienceRanges, Math.round(total));
   resumeObj.parts.approxExperienceInYears = total.toFixed(1);
-  resumeObj.parts.mentionedExperienceInYears = experience
+  resumeObj.parts.mentionedExperienceInYears = resumeObj?.rawText
     ?.match(regex2)?.[0]
-    .split(/year|yr|years|yrs/)?.[0];
+    .split(/year|yr|years|yrs/)?.[0]
+    ?.trim();
   return resumeObj;
 }
