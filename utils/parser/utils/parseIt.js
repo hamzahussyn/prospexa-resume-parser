@@ -26,7 +26,7 @@ var parser = {
             );
           }
           logger.trace('Resume ' + preppedFile.name + ' saved');
-          return cbAfterParse(preppedFile.name);
+          return cbAfterParse(preppedFile);
         });
       });
     };

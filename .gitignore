@@ -1,5 +1,13 @@
+.env
+
 node_modules
 resume/*
 
 uploads/*
 !uploads/.gitkeep
+
+parsed/*
+!parsed/.gitkeep
+
+parsed/raw/*
+!parsed/raw/.gitkeep
