@@ -49,13 +49,10 @@ function post(req, res, next) {
   resumeParser.parseResumeFile(req.file.path, './parsed').then((resume) => {
     fs.readFile(`parsed/${req.file.filename}.json`, async function (err, data) {
       if (err) throw err;
-      var json = JSON.parse(data);
-
-      const GPTProfile = await _getGPTCompletion(resume.resume.rawText);
-
+      // const GPTProfile = await _getGPTCompletion(resume.resume.rawText);
       const profile = {
         ...JSON.parse(data),
-        profileSummary: GPTProfile.data.choices[0].message.content,
+        // profileSummary: GPTProfile.data.choices[0].message.content,
       };
 
       res.render('result', {

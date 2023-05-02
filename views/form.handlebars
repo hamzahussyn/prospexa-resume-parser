@@ -20,7 +20,11 @@
         </a>
       </h1>
     </header>
-    <form method='post' enctype='multipart/form-data'>
+    <form
+      method='post'
+      enctype='multipart/form-data'
+      action='{{window.location.href}}'
+    >
       <input type='file' name='file' accept='.pdf' />
       <button type='submit'>Parse</button>
     </form>
