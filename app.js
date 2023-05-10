@@ -9,11 +9,13 @@ const { connectDB } = require('./providers/database');
 const { AuthController } = require('./controllers/auth.controller');
 const { MVPController } = require('./controllers/mvp.controller');
 const { handleError } = require('./utils/exceptions');
-const { checkEquals } = require('./utils/handlebars');
+const { checkEquals, splitOnNewLine } = require('./utils/handlebars');
+const helmetConfig = require('./helmet.config');
 
 // connectDB();
 
 handlebars.registerHelper('eq', checkEquals);
+handlebars.registerHelper('splitOnNewLine', splitOnNewLine);
 
 const app = express();
 
@@ -25,7 +27,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/auth', AuthController);
-app.use('/mvp', MVPController);
+app.use('/mvp', helmet(helmetConfig), MVPController);
+app.use('/resources', express.static(__dirname + '/public'));
 
 app.get('/', function (request, response, next) {
   response.status(200).json({ message: 'creds-backend' });

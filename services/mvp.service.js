@@ -9,10 +9,6 @@ module.exports = {
   post,
 };
 
-function isGithub(key) {
-  return key === 'github';
-}
-
 function _getGPTCompletion(prompt) {
   if (!prompt || !prompt.length) return;
   console.log('prompt recieved', prompt);
@@ -107,7 +103,6 @@ function post(req, res, next) {
       res.render('result', {
         layout: false,
         result: profile,
-        isGithub,
       });
     });
 

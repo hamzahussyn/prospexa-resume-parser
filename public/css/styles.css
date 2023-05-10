@@ -1,0 +1,196 @@
+body {
+  font-family: 'Poppins';
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #0e394c;
+  color: #fff;
+  padding: 1.25rem 1rem;
+  position: sticky;
+  top: 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin-bottom: -4px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+a {
+  color: #0e394c;
+  text-decoration: none;
+}
+
+form {
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  background-color: #fff;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2.5rem;
+  align-items: center;
+  margin: 0 auto;
+  /* opacity: 0; */
+  /* Set the initial state to hidden */
+  /* animation: slideFadeIn 1s ease forwards;
+  animation-delay: 0.5s; */
+  /* Apply the animation */
+}
+
+@media (max-width: 640px) {
+  form {
+    width: fit-content;
+    min-width: 300px;
+  }
+}
+
+.prompt {
+  color: #444;
+  cursor: pointer;
+}
+
+.prompt p {
+  margin: 0;
+}
+
+#form-submit {
+  font-family: 'Poppins';
+  background-color: #0e394c;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 24px;
+  transition: all 0.15s ease-in-out;
+}
+
+.back-button {
+  font-family: 'Poppins';
+  color: #0e394c;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.15s ease-in-out;
+}
+
+#form-submit[disabled='disabled'] {
+  background-color: #999;
+  pointer-events: none;
+}
+
+#form-submit:hover {
+  background-color: #154f69;
+}
+
+.submit-container {
+  display: flex;
+  align-items: center;
+}
+
+#preview {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 600px;
+  display: block;
+  height: calc(100vh - 14rem);
+  border-radius: 0.5rem;
+}
+
+/* Spinner */
+.lds-dual-ring {
+  display: inline-block;
+}
+.lds-dual-ring:after {
+  content: ' ';
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: 8px;
+  border-radius: 50%;
+  border: 2px solid #444;
+  border-color: #444 #444 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.display-none {
+  display: none !important;
+}
+
+#error-text {
+  color: rgb(231, 26, 26);
+  font-size: 0.75rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.profile-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  flex-grow: 1;
+}
+
+.result-container .title,
+.result-container .value {
+  margin: 0;
+}
+
+.title {
+  font-weight: 500;
+  width: 20vw;
+  flex-shrink: 0;
+}
