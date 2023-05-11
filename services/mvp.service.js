@@ -93,12 +93,12 @@ function post(req, res, next) {
 
       const [CREDS_METRICS, GPTProfile] = await Promise.all([
         _getCredsMetrics(resume.resume.rawText),
-        _getGPTCompletion(resume.resume.rawText),
+        // _getGPTCompletion(resume.resume.rawText),
       ]);
 
       const profile = {
         ...JSON.parse(data),
-        profileSummary: GPTProfile.data.choices[0].message.content,
+        // profileSummary: GPTProfile.data.choices[0].message.content,
         expertise: CREDS_METRICS.prediction,
         expertiseLevel: CREDS_METRICS.complexity,
         skills: CREDS_METRICS.skills,

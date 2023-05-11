@@ -4,38 +4,30 @@ var _ = require('underscore');
 
 module.exports = {
   titles: {
-    objective: ['objective', 'objectives'],
-    summary: ['summary', 'professional summary'],
+    objective: ['objective(s)?'],
+    summary: ['professional? summary'],
     technology: ['technology'],
-    experience: ['experience', 'work experience'],
+    experience: ['work? (?:experience|history)'],
     education: ['education'],
-    skills: ['skills', 'Skills & Expertise', 'technical skills'],
+    skills: ['skills( & expertise)?|technical skills'],
     languages: ['languages'],
     courses: ['courses'],
     projects: [
-      'projects',
-      'personal projects',
-      'academic projects',
-      'final year project',
+      'personal projects|academic projects|final year project|projects'
     ],
     links: ['links'],
-    contacts: ['contacts', 'contact'],
-    positions: ['positions', 'position'],
+    contacts: ['contact(s)?'],
+    positions: ['position(s)?'],
     profiles: [
-      'profiles',
-      'social connect',
-      'social-profiles',
-      'social profiles',
+      'profiles|social connect|social-profiles|social profiles',
     ],
     awards: ['awards'],
     honors: ['honors'],
     additional: ['additional'],
     certification: [
-      'certification',
-      'certifications',
-      'Licenses & Certifications',
+      'certification|certifications|licenses & certifications|license & certification|license|licenses',
     ],
-    interests: ['interests', 'extra curricular'],
+    interests: ['interests|extra curricular|hobbies'],
   },
   profiles: [
     [
@@ -70,7 +62,7 @@ module.exports = {
                 .text()
                 .trim()
                 .split('\n')
-                .join('\n');
+                .join('\n'), 
             contributions = $('.js-yearly-contributions')
               .children()
               .children()
@@ -78,7 +70,6 @@ module.exports = {
               .text()
               .trim()
               .split('\n')[0];
-
             Resume.addObject('github', {
               name: fullName,
               location: location,
@@ -87,7 +78,7 @@ module.exports = {
               joined: clock,
               company: company,
               followers: followers,
-              repositories: repositories,
+              repositories: repositories.substring(0, repositories.length / 2),
               contributions: contributions,
             });
           } else {

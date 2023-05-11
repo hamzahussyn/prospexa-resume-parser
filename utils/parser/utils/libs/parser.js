@@ -23,10 +23,11 @@ function makeRegExpFromDictionary() {
   _.forEach(dictionary.titles, function (titles, key) {
     regularRules.titles[key] = [];
     _.forEach(titles, function (title) {
-      regularRules.titles[key].push(title.toUpperCase());
-      regularRules.titles[key].push(
-        title[0].toUpperCase() + title.substr(1, title.length)
-      );
+      // regularRules.titles[key].push(title.toUpperCase());
+      // regularRules.titles[key].push(
+      //   title[0].toUpperCase() + title.substr(1, title.length)
+      // );
+      regularRules.titles[key].push(title);
     });
   });
 
@@ -189,13 +190,14 @@ function parseDictionaryTitles(Resume, rows, rowIdx) {
     isRuleFound,
     result;
 
+  // console.log('what the fuck', allTitles);
   _.forEach(dictionary.titles, function (expressions, key) {
     expressions = expressions || [];
     // means, that titled row is less than 5 words
     if (countWords(row) <= 5) {
       _.forEach(expressions, function (expression) {
         // console.log({ expression });
-        ruleExpression = new RegExp(expression);
+        ruleExpression = new RegExp(expression, 'gmi');
         isRuleFound = ruleExpression.test(row);
 
         if (isRuleFound) {
@@ -203,9 +205,67 @@ function parseDictionaryTitles(Resume, rows, rowIdx) {
           searchExpression =
             '(?:' + expression + ')((.*\n)+?)(?:' + allTitles + '|{end})';
           // restore remaining text to search in relevant part of text
-          result = new RegExp(searchExpression, 'gm').exec(
+          result = new RegExp(searchExpression, 'gmi').exec(
             restoreTextByRows(rowIdx, rows)
           );
+
+          if (expression === 'work? (?:experience|history)') {
+            // console.log('what we need', result);
+            const jobTitleRegExp = new RegExp(
+              /(?<=\n)[^\n]*\b(?:Engineer|Developer|Manager|Analyst|Specialist|Architect|Designer|Intern|Assistant|surgeon|Pharmacist|Writer|Creator|nurse|officer|worker|advisor|planner|agent|operator|teacher|inspector|therapist|volunteer|organizer|organiser|coach|scientist|researcher|interpreter|executive|banker|surveyor|consultant|chemist|executive|Psychologist|Pharmacologist|Physiotherapist|editor|photographer|librarian|attorney|laywer|clerk|Paramedic|representative|dean|professor|Coordinator)\b[^\n]*/gim
+            );
+            if (result) {
+              console.log('result', result[1]);
+              const testCase = result[1];
+              console.log('testCase', testCase);
+              console.log(
+                'regex reuslt',
+                JSON.stringify(testCase.match(jobTitleRegExp))
+              );
+              const matchesForExp = [
+                ...new Set(testCase.match(jobTitleRegExp)),
+              ];
+
+              let matchesRegExp = [];
+              let groupedExperience = [];
+
+              if (matchesForExp.length) {
+                matchesForExp.forEach((match, index) => {
+                  let regExObj = {};
+
+                  regExObj.index = index;
+                  regExObj.matchTitle = match;
+                  regExObj.excludingTitles = matchesForExp
+                    .filter((_) => _ !== match)
+                    .join('|');
+
+                  matchesRegExp.push(regExObj);
+                });
+              }
+              const experienceBody = result[1] + '\n{end}';
+              if (matchesRegExp.length) {
+                matchesRegExp.forEach((regex, index) => {
+                  const { matchTitle, excludingTitles } = regex;
+                  searchExpression =
+                    '(?:' +
+                    matchTitle +
+                    ')((.*\n)+?)(?:' +
+                    excludingTitles +
+                    '|{end})';
+                  console.log(searchExpression);
+                  const description = new RegExp(searchExpression, 'gmi').exec(
+                    experienceBody
+                  );
+                  groupedExperience.push({
+                    title: matchTitle,
+                    description: description[1],
+                  });
+                });
+              }
+              console.log(groupedExperience);
+              console.log(matchesRegExp);
+            }
+          }
 
           if (result) {
             Resume.addKey(key, result[1]);
